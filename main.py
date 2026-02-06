@@ -381,7 +381,7 @@ async def get_lesson(lesson_id: int):
     lesson = next((l for l in lessons_db if l.id == lesson_id), None)
     if not lesson:
         raise HTTPException(status_code=404, detail="Lesson not found")
-    return lesson
+    return {"MESSAGE" : "THIS IS BROKEN"}
 
 
 @app.get("/lessons/difficulty/{difficulty}", response_model=List[Lesson])
