@@ -391,21 +391,21 @@ async def get_lessons_by_difficulty(difficulty: Difficulty):
     return filtered
 
 
-@app.get("/lessons/search")
-async def search_lessons(keyword: str):
-    """Search lessons by keyword"""
-    keyword_lower = keyword.lower()
-    results = [
-        {
-            "id": l.id,
-            "title": l.title,
-            "difficulty": l.difficulty,
-            "matching_concepts": [c for c in l.key_concepts if keyword_lower in c.lower()]
-        }
-        for l in lessons_db
-        if keyword_lower in l.title.lower() or keyword_lower in l.content.lower()
-    ]
-    return results
+# @app.get("/lessons/search")
+# async def search_lessons(keyword: str):
+#     """Search lessons by keyword"""
+#     keyword_lower = keyword.lower()
+#     results = [
+#         {
+#             "id": l.id,
+#             "title": l.title,
+#             "difficulty": l.difficulty,
+#             "matching_concepts": [c for c in l.key_concepts if keyword_lower in c.lower()]
+#         }
+#         for l in lessons_db
+#         if keyword_lower in l.title.lower() or keyword_lower in l.content.lower()
+#     ]
+#     return results
 
 
 # ============== QUIZ ENDPOINTS ==============
