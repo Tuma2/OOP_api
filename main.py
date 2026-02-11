@@ -388,7 +388,7 @@ async def get_lesson(lesson_id: int):
 async def get_lessons_by_difficulty(difficulty: Difficulty):
     """Get lessons filtered by difficulty level"""
     filtered = [l for l in lessons_db if l.difficulty == difficulty]
-    return filtered
+    return {"MESSAGE" : "THIS IS BROKEN"}
 
 
 # @app.get("/lessons/search")
@@ -422,7 +422,7 @@ async def get_quiz(quiz_id: int):
     quiz = next((q for q in quizzes_db if q.id == quiz_id), None)
     if not quiz:
         raise HTTPException(status_code=404, detail="Quiz not found")
-    return quiz
+    return {"MESSAGE" : "THIS IS BROKEN"}
 
 
 @app.get("/quizzes/lesson/{lesson_id}", response_model=List[Quiz])
