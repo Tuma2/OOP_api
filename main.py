@@ -350,21 +350,21 @@ quizzes_db = [
 
 # ============== ENDPOINTS ==============
 
-@app.get("/")
-async def root():
-    """Welcome endpoint with API information"""
-    return {
-        "message": "Welcome to OOP Learning API",
-        "version": "1.0.0",
-        "endpoints": {
-            "lessons": "/lessons",
-            "lesson_by_id": "/lessons/{lesson_id}",
-            "lessons_by_difficulty": "/lessons/difficulty/{difficulty}",
-            "quizzes": "/quizzes",
-            "quiz": "/quizzes/{quiz_id}",
-            "submit_quiz": "/quizzes/{quiz_id}/submit"
-        }
-    }
+# @app.get("/")
+# async def root():
+#     """Welcome endpoint with API information"""
+#     return {
+#         "message": "Welcome to OOP Learning API",
+#         "version": "1.0.0",
+#         "endpoints": {
+#             "lessons": "/lessons",
+#             "lesson_by_id": "/lessons/{lesson_id}",
+#             "lessons_by_difficulty": "/lessons/difficulty/{difficulty}",
+#             "quizzes": "/quizzes",
+#             "quiz": "/quizzes/{quiz_id}",
+#             "submit_quiz": "/quizzes/{quiz_id}/submit"
+#         }
+#     }
 
 
 # ============== LESSON ENDPOINTS ==============
